@@ -6,7 +6,9 @@
 import argparse, sys
 
 def parse_args():
-    ap = argparse.ArgumentParser()
+    ap = argparse.ArgumentParser(
+        description="Finds Heisig kanji from a KANJIDIC database.  Outputs to "
+        "stdout, sorted by Heisig index in ascending order.")
     ap.add_argument("kanjidic")
     ap.add_argument("from_index", type=int)
     ap.add_argument("to_index", type=int)
